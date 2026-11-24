@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cardápio de Natal · Doce Vício — 10% OFF</title>
-<meta name="description" content="Cardápio de Natal da Doce Vício por Juniane Cordeiro: taças, colombas, sobremesas, rabanadas, bolos e presentes com 10% de desconto. Encomendas até 23/12.">
+<title>Cardápio de Natal · Doce Vício — 10% OFF só hoje</title>
+<meta name="description" content="Cardápio de Natal da Doce Vício por Juniane Cordeiro: taças, colombas, sobremesas, rabanadas, bolos e presentes com 10% de desconto só hoje, 24/11. Encomendas até 23/12.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..800,50;1,9..144,300..800,100&family=Hanken+Grotesk:wght@400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
@@ -151,6 +151,11 @@ a{color:inherit}
 .card h3{font-family:var(--display);font-weight:500;font-size:1.45rem;line-height:1.1;letter-spacing:-.01em}
 .card p{color:var(--muted);font-size:.93rem}
 .meta{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--sage)}
+.order{flex-shrink:0;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--pine);color:var(--paper);text-decoration:none;transition:transform .25s,background .25s}
+.order:hover{background:var(--berry);transform:rotate(-12deg) scale(1.08)}
+.order svg{width:20px;height:20px}
+.rows .order{width:36px;height:36px}
+.rows .order svg{width:16px;height:16px}
 .card__foot{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;gap:.8rem;padding-top:.8rem;border-top:1px dashed var(--line)}
 
 /* horizontal list block (photo + list of flavours) */
@@ -163,7 +168,7 @@ a{color:inherit}
 .listblock__body h3{font-family:var(--display);font-weight:400;font-size:clamp(1.8rem,3.5vw,2.5rem);line-height:1}
 .listblock__body h3 + .meta{display:block;margin:.5rem 0 1.4rem;color:var(--berry)}
 .rows{list-style:none}
-.rows li{display:grid;grid-template-columns:1fr auto;align-items:center;gap:.9rem;padding:.95rem 0;border-bottom:1px dashed var(--line)}
+.rows li{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:.9rem;padding:.95rem 0;border-bottom:1px dashed var(--line)}
 .rows li:last-child{border-bottom:0}
 .rows .name{font-family:var(--display);font-size:1.12rem;line-height:1.2}
 .rows .name small{display:block;font-family:var(--body);font-size:.8rem;color:var(--muted)}
@@ -184,6 +189,8 @@ a{color:inherit}
 .feature .rows .price .now{color:#fff6e8}
 .feature .rows .price .was{color:rgba(255,246,232,.6);text-decoration-color:var(--gold-soft)}
 .feature .price .off{background:var(--gold);color:var(--berry-deep)}
+.feature .order{background:var(--gold);color:var(--berry-deep)}
+.feature .order:hover{background:#fff6e8}
 
 /* gift shelf */
 .gifts{display:grid;grid-template-columns:repeat(12,1fr);gap:1.6rem}
@@ -227,12 +234,23 @@ a{color:inherit}
 .closing{text-align:center;padding:clamp(5rem,10vw,8rem) 0 clamp(4rem,8vw,6rem)}
 .closing .script{font-family:var(--script);font-size:clamp(3.5rem,9vw,7rem);color:var(--berry);line-height:.9}
 .closing h2{font-family:var(--display);font-weight:400;font-size:clamp(1.5rem,3vw,2.2rem);max-width:40rem;margin:1rem auto 2rem;line-height:1.25}
-.contact{display:flex;justify-content:center;flex-wrap:wrap;gap:.6rem 1rem}
-.contact span{font-weight:600;padding:.6rem 1.1rem;border:1px solid var(--line);border-radius:99px;background:var(--paper)}
+.closing .hero__cta{justify-content:center}
+.btn--berry{background:var(--berry);color:#fff6e8;box-shadow:0 6px 0 var(--berry-deep);flex-shrink:0}
+.btn--berry:hover{transform:translateY(-2px);box-shadow:0 8px 0 var(--berry-deep)}
+.today{display:flex;align-items:center;gap:1.4rem;margin-top:clamp(3rem,6vw,4.5rem);padding:1.2rem 1.4rem;border:2px dashed var(--berry);border-radius:var(--radius);background:rgba(163,48,47,.06)}
+.today__tag{flex-shrink:0;font-family:var(--script);font-size:2.6rem;line-height:1;color:var(--berry);transform:rotate(-6deg);padding:0 .3rem}
+.today p{flex:1;color:var(--ink)}
+.today p b{color:var(--berry)}
+.chips{margin-top:2.4rem!important}
+/* floating whatsapp */
+.fab{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;align-items:center;gap:.6rem;background:#1f6b45;color:#fff;padding:.85rem 1.1rem .85rem .95rem;border-radius:99px;text-decoration:none;font-weight:600;font-size:.9rem;box-shadow:0 14px 30px -10px rgba(0,0,0,.45);transition:transform .25s}
+.fab:hover{transform:translateY(-3px)}
+.fab svg{width:22px;height:22px}
 .footer{border-top:1px solid var(--line);padding:2rem 0 2.5rem;font-size:.86rem;color:var(--muted)}
 .footer__in{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;flex-wrap:wrap}
 .footer img{height:56px;mix-blend-mode:multiply}
-.footer .links{display:flex;gap:1.4rem;flex-wrap:wrap;font-weight:600;color:var(--ink)}
+.footer a{text-decoration:none;font-weight:600;color:var(--ink)}
+.footer .links{display:flex;gap:1.4rem;flex-wrap:wrap}
 
 /* ---------- responsive ---------- */
 @media (max-width:980px){
@@ -263,8 +281,12 @@ a{color:inherit}
   .mosaic figure:first-child{grid-row:auto}
   .hero__art{min-height:400px}
   .polaroid{width:46%}
-  .rows li{grid-template-columns:1fr}
-  .rows li .price{justify-content:flex-start}
+  .rows li{grid-template-columns:1fr auto}
+  .rows li .price{grid-column:1/2;justify-content:flex-start}
+  .rows li .order{grid-column:2;grid-row:1/3}
+  .fab span{display:none}
+  .fab{padding:.95rem}
+  .today{flex-direction:column;align-items:flex-start;text-align:left}
   .hero__note{gap:1.2rem;flex-wrap:wrap}
 }
 @media (prefers-reduced-motion:reduce){
@@ -277,8 +299,8 @@ a{color:inherit}
 
 <div class="ribbon" aria-label="Promoção">
   <div class="ribbon__track">
-    <span>10% OFF em todo o cardápio de Natal</span><span>Encomendas até 23/12</span><span>Feito com carinho por Juniane Cordeiro</span><span>Retirada na loja · Quadra 56, lote 21, Centro</span>
-    <span>10% OFF em todo o cardápio de Natal</span><span>Encomendas até 23/12</span><span>Feito com carinho por Juniane Cordeiro</span><span>Retirada na loja · Quadra 56, lote 21, Centro</span>
+    <span>10% OFF só hoje · 24/11</span><span>Encomendas até 23/12</span><span>Feito com carinho por Juniane Cordeiro</span><span>Retirada na loja · Quadra 56, lote 21, Centro</span>
+    <span>10% OFF só hoje · 24/11</span><span>Encomendas até 23/12</span><span>Feito com carinho por Juniane Cordeiro</span><span>Retirada na loja · Quadra 56, lote 21, Centro</span>
   </div>
 </div>
 
@@ -288,7 +310,7 @@ a{color:inherit}
     <nav class="nav__links" aria-label="Categorias">
       <a href="#tacas">Taças</a><a href="#colomba">Colomba</a><a href="#sobremesas">Sobremesas</a><a href="#rabanadas">Rabanadas</a><a href="#bolos">Bolos</a><a href="#presentes">Presentes</a><a href="#info">Como pedir</a>
     </nav>
-    <a class="btn btn--pine" href="#tacas">Ver cardápio</a>
+    <a class="btn btn--pine" data-wa="Olá! Vi o cardápio de Natal com 10% de desconto de hoje e quero fazer uma encomenda." href="#">Encomendar</a>
   </div>
 </header>
 
@@ -299,26 +321,26 @@ a{color:inherit}
       <div>
         <span class="eyebrow rise d1">Doce Vício · por Juniane Cordeiro</span>
         <h1 class="rise d2">Cardápio de <span class="natal">Natal</span></h1>
-        <p class="hero__lead rise d3">Taças, colombas, rabanadas, bolos e mimos para presentear — tudo artesanal, do jeitinho da nossa mesa. E neste Natal, <strong>todo o cardápio está com 10% de desconto</strong>.</p>
+        <p class="hero__lead rise d3">Taças, colombas, rabanadas, bolos e mimos para presentear — tudo artesanal, do jeitinho da nossa mesa. E <strong>só hoje, 24/11, todo o cardápio está com 10% de desconto</strong> — aproveite!</p>
         <div class="hero__cta rise d4">
           <a class="btn btn--pine" href="#tacas">Ver o cardápio
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
-          <a class="btn btn--ghost" href="#mesa">Ver nossa mesa</a>
+          <a class="btn btn--ghost" data-wa="Olá! Quero encomendar doces do cardápio de Natal com os 10% de desconto de hoje." href="#">Pedir pelo WhatsApp</a>
         </div>
         <div class="hero__note rise d5">
-          <div><b>-10%</b>em todos os itens</div>
+          <div><b>-10%</b>só hoje, 24/11</div>
           <div><b>23/12</b>último dia de pedidos</div>
           <div><b>30+</b>delícias natalinas</div>
         </div>
       </div>
 
       <div class="hero__art rise d3">
-        <div class="seal" aria-label="10% de desconto">
+        <div class="seal" aria-label="10% de desconto só hoje">
           <svg class="ring" viewBox="0 0 150 150" aria-hidden="true">
             <defs><path id="c" d="M75 75 m-62 0 a62 62 0 1 1 124 0 a62 62 0 1 1 -124 0"/></defs>
-            <text font-family="Hanken Grotesk" font-weight="700" font-size="11.5" letter-spacing="3.2" fill="#7d1f22"><textPath href="#c">DESCONTO DE NATAL ✦ DESCONTO DE NATAL ✦ </textPath></text>
+            <text font-family="Hanken Grotesk" font-weight="700" font-size="11.5" letter-spacing="3.2" fill="#7d1f22"><textPath href="#c">SÓ HOJE ✦ 24/11 ✦ SÓ HOJE ✦ 24/11 ✦ </textPath></text>
           </svg>
-          <div class="seal__core"><div><b>10<small>%</small></b><span>OFF</span></div></div>
+          <div class="seal__core"><div><b>10<small>%</small></b><span>só hoje</span></div></div>
         </div>
         <div class="arch"><img src="img/mesa-1.jpg" alt="Mesa de Natal da Doce Vício com tortas, pudins, rabanadas e cheesecake"></div>
         <figure class="polaroid"><img src="img/mesa-2.jpg" alt="Torta red velvet com laço dourado e cheesecake de frutas vermelhas"><figcaption>nossa mesa</figcaption></figure>
@@ -338,6 +360,11 @@ a{color:inherit}
   </section>
 
   <div class="wrap">
+    <div class="today reveal">
+      <div class="today__tag">Só hoje</div>
+      <p><b>10% de desconto em todo o cardápio somente hoje, 24/11.</b> Os preços abaixo já estão com o desconto — garanta o seu pedido ainda hoje.</p>
+      <a class="btn btn--berry" data-wa="Olá! Quero aproveitar os 10% de desconto de hoje no cardápio de Natal." href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Garantir desconto</a>
+    </div>
     <nav class="chips reveal" aria-label="Ir para categoria">
       <a href="#tacas">Taças da felicidade</a><a href="#colomba">Colomba</a><a href="#novidade">Novidade: Sagu</a><a href="#sobremesas">Sobremesas</a><a href="#rabanadas">Rabanadas</a><a href="#bolos">Bolos</a><a href="#presentes">Presentes</a>
     </nav>
@@ -475,8 +502,9 @@ a{color:inherit}
     <div class="wrap reveal">
       <div class="script">Feliz Natal</div>
       <h2>Obrigada por deixar a Doce Vício fazer parte dos seus momentos mais especiais. Que não faltem amor, união e muitos doces!</h2>
-      <div class="contact">
-        <span>(61) 98447-5407</span><span>@docevicio___</span><span>Quadra 56, lote 21, Centro</span>
+      <div class="hero__cta">
+        <a class="btn btn--pine" data-wa="Olá! Quero fazer minha encomenda de Natal com os 10% de desconto de hoje." href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>(61) 98447-5407</a>
+        <a class="btn btn--ghost" href="https://www.instagram.com/docevicio___/" target="_blank" rel="noopener">@docevicio___</a>
       </div>
     </div>
   </section>
@@ -485,13 +513,19 @@ a{color:inherit}
 <footer class="footer">
   <div class="wrap footer__in">
     <img src="img/logo.png" alt="Doce Vício por Juniane Cordeiro">
-    <div>Preços promocionais com 10% de desconto já aplicado sobre o cardápio de Natal.</div>
-    <div class="links"><span>(61) 98447-5407</span><span>@docevicio___</span></div>
+    <div>Desconto de 10% válido somente hoje, 24/11, já aplicado nos preços do cardápio.</div>
+    <div class="links"><a data-wa="Olá!" href="#">WhatsApp</a><a href="https://www.instagram.com/docevicio___/" target="_blank" rel="noopener">Instagram</a></div>
   </div>
 </footer>
 
+<a class="fab" data-wa="Olá! Vi o cardápio de Natal com 10% de desconto de hoje e quero fazer uma encomenda." href="#" aria-label="Encomendar pelo WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+  <span>Encomendar</span>
+</a>
+
 <script>
 /* ===== Configuração ===== */
+const WHATS = "5561984475407";
 const DISCOUNT = 0.10;
 
 /* ===== Cardápio (preços originais do PDF; o desconto é calculado) ===== */
@@ -545,13 +579,16 @@ const MENU = {
 /* ===== Helpers ===== */
 const brl = v => v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
 const off = p => Math.round(p*(1-DISCOUNT)*100)/100;
+const wa = msg => `https://wa.me/${WHATS}?text=${encodeURIComponent(msg)}`;
+const icon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>`;
+const orderBtn = (name,p,u="") => `<a class="order" target="_blank" rel="noopener" href="${wa(`Olá! Quero encomendar: ${name} — ${brl(off(p))}${u} (com os 10% de desconto de hoje).`)}" aria-label="Encomendar ${esc(name)}">${icon}</a>`;
 const esc = s => s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const priceHTML = (p,u="") => `<div class="price"><span class="was">${brl(p)}${u}</span><span class="now">${brl(off(p))}${u?`<small>${u}</small>`:""}</span><span class="off">-10%</span></div>`;
 
 function card(it){
   const inner = it.variants
-    ? `<div class="split-prices">${it.variants.map(v=>`<div><span class="meta">${v.n}</span>${priceHTML(v.p)}</div>`).join("")}</div>`
-    : priceHTML(it.p,it.u);
+    ? `<div class="split-prices">${it.variants.map(v=>`<div><span class="meta">${v.n}</span>${priceHTML(v.p)}</div>`).join("")}</div>${orderBtn(it.n+" ("+it.variants.map(v=>v.n).join(" / ")+")", it.variants[0].p)}`
+    : `${priceHTML(it.p,it.u)}${orderBtn(it.n,it.p,it.u)}`;
   return `<article class="card reveal">
     <div class="card__img"><img src="img/${it.img}" alt="${esc(it.n)}" loading="lazy">${it.b?`<span class="card__badge">${it.b}</span>`:""}</div>
     <div class="card__body">
@@ -564,12 +601,16 @@ function card(it){
   </article>`;
 }
 function row(it){
-  return `<li><span class="name">${it.n}${it.s?`<small>${it.s}</small>`:""}</span>${priceHTML(it.p)}</li>`;
+  const full = it.k ? `${it.k} ${it.n}` : it.n;
+  return `<li><span class="name">${it.n}${it.s?`<small>${it.s}</small>`:""}</span>${priceHTML(it.p)}${orderBtn(full,it.p)}</li>`;
 }
 
 document.querySelectorAll("[data-render]").forEach(el=>{
   const items = MENU[el.dataset.render];
   el.innerHTML = items.map(el.tagName==="UL" ? row : card).join("");
+});
+document.querySelectorAll("[data-wa]").forEach(a=>{
+  a.href = wa(a.dataset.wa); a.target="_blank"; a.rel="noopener";
 });
 
 /* scroll reveal */
