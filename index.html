@@ -3,7 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cardápio de Natal · Doce Vício — 10% OFF só hoje</title>
+<title>Cardápio de Natal · Doce Vício</title>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cordeiro-i.github.io/docevicio-natal/">
+<meta property="og:title" content="Cardápio de Natal · Doce Vício">
+<meta property="og:description" content="Cardápio de Natal da Doce Vício por Juniane Cordeiro: taças, colombas, sobremesas, rabanadas, bolos e presentes artesanais. Encomendas até 23/12.">
+<meta property="og:image" content="https://cordeiro-i.github.io/docevicio-natal/img/mesa-3.jpg">
+<meta property="og:image:width" content="1672">
+<meta property="og:image:height" content="941">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="description" content="Cardápio de Natal da Doce Vício por Juniane Cordeiro: taças, colombas, sobremesas, rabanadas, bolos e presentes artesanais. Encomendas até 23/12.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -532,9 +541,9 @@ const todayBR = new URLSearchParams(location.search).get("data")
   || new Intl.DateTimeFormat("en-CA",{timeZone:"America/Sao_Paulo"}).format(new Date());
 const PROMO = todayBR <= PROMO_LAST_DAY;
 const DISCOUNT = PROMO ? 0.10 : 0;
+if(PROMO) document.title = "Cardápio de Natal · Doce Vício — 10% OFF só hoje";
 if(!PROMO){
   document.documentElement.classList.add("no-promo");
-  document.title = "Cardápio de Natal · Doce Vício";
   document.querySelectorAll("[data-nopromo]").forEach(el=>el.textContent=el.dataset.nopromo);
   document.querySelectorAll("[data-wa]").forEach(a=>{ if(a.dataset.wa!=="Olá!") a.dataset.wa="Olá! Vi o cardápio de Natal e quero fazer uma encomenda."; });
 }
